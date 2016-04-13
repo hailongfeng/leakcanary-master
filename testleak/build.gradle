@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        wizarpospem_code {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('D:/app/GrandOcean/wizarpospem_code.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        applicationId "com.wizarpos.testleak"
+        minSdkVersion 8
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig  signingConfigs.wizarpospem_code
+        }
+//        debug{
+//            signingConfig  signingConfigs.wizarpospem_code
+//        }
+    }
+}
+
+dependencies {
+    debugCompile project(':leakcanary-android')
+    releaseCompile project(':leakcanary-android-no-op')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+}

@@ -1,0 +1,6 @@
+集成步骤如下：
+1，依赖关系为
+sample 依赖leakcanary-android和leakcanary-android-no-op；
+leakcanary-android 依赖leakcanary-analyzer；
+leakcanary-analyzer 依赖leakcanary-watcher；
+2，在application中添加相应代码，在需要的activity中监控activity
