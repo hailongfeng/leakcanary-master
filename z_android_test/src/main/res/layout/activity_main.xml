@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KeyboardTestActivity">
+
+    <EditText
+        android:id="@+id/edt_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.wizarpos.androidtest.view.KeyboardView
+        android:id="@+id/kb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        kb:with_dot="true"
+        kb:maxLength="10"
+        />
+</LinearLayout>

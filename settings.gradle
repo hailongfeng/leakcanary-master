@@ -1,4 +1,4 @@
-include ':leakcanary-watcher', ':testleak', ':z_java_test'
+include ':leakcanary-watcher', ':testleak', ':z_java_test', ':z_android_test'
 include ':leakcanary-analyzer'
 include ':leakcanary-android'
 include ':leakcanary-android-no-op'
